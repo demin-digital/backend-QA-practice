@@ -12,7 +12,7 @@ public class UserInfo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private Long user_id;
-    @Column(name = "password_hash", nullable = false)
+    @Column(name = "password", nullable = false)
     private String password;
     @Column(name = "username", unique = true, nullable = false)
     private String username;
