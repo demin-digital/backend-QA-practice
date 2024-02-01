@@ -24,6 +24,7 @@ public class RegistrationController {
     public ResponseEntity<RegistrationResponse> registration(@RequestBody RegistrationRequest request) {
         RegistrationResponse response = new RegistrationResponse(registrationService.userRegistration(request));
 
+
         if (response.isResult()) {
             return ResponseEntity.ok(response);
         }
