@@ -14,8 +14,7 @@ public class AuthService {
         this.userInfoRepository = userInfoRepository;
     }
 
-    public boolean authenticate(String username, String password) {
-        UserInfo userInfo = userInfoRepository.findByUsernameAndPassword(username, password);
-        return userInfo != null;
+    public UserInfo authenticate(String username, String password) {
+        return userInfoRepository.findByUsernameAndPassword(username, password);
     }
 }
