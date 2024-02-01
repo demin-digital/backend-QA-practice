@@ -14,12 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class RegistrationController {
 
     private final RegistrationService registrationService;
-    private final JwtTokenProviderService jwtTokenProviderService;
-
+    
     @Autowired
-    public RegistrationController(RegistrationService registrationService, JwtTokenProviderService jwtTokenProviderService) {
+    public RegistrationController(RegistrationService registrationService) {
         this.registrationService = registrationService;
-        this.jwtTokenProviderService = jwtTokenProviderService;
     }
 
     @PostMapping("/registration")

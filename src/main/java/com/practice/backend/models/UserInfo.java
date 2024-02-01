@@ -85,4 +85,8 @@ public class UserInfo {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public boolean hasData() {
+        return user_id != null;
+    }
 }

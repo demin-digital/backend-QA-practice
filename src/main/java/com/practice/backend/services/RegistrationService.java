@@ -31,7 +31,7 @@ public class RegistrationService {
 
     public RegistrationResponse userRegistration(RegistrationRequest request) {
 
-        if (userInfoRepository.existsByUsername(request.getUsername())) {
+        if (!userInfoRepository.existsByUsername(request.getUsername())) {
             if (emailValidation(request.getEmail())) {
                 if (phoneNumberValidator(request.getPhoneNumber())) {
                     Token userToken = new Token();
