@@ -6,6 +6,7 @@ import com.practice.backend.services.JwtTokenProviderService;
 import com.practice.backend.services.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +22,7 @@ public class RegistrationController {
         this.registrationService = registrationService;
         this.jwtTokenProviderService = jwtTokenProviderService;
     }
-
+    
     @PostMapping("/registration")
     public ResponseEntity<RegistrationResponse> registration(@RequestBody RegistrationRequest request) {
         RegistrationResponse response = new RegistrationResponse(registrationService.userRegistration(request));
