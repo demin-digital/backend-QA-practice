@@ -1,2 +1,5 @@
-target/
-.vscode/*
+target/*
+.vscode/launch.json
+.vscode/settings.json
+target/classes/Application.class
+target/classes/com/practice/backend/controllers/RegistrationController.class
