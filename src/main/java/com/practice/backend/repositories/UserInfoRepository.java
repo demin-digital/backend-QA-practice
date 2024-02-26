@@ -16,4 +16,6 @@ public interface UserInfoRepository extends JpaRepository<UserInfo, Long> {
 
     @Query("SELECT u FROM UserInfo u WHERE u.username = :username AND u.password = :password")
     UserInfo findByUsernameAndPassword(@Param("username") String username, @Param("password") String password);
+
+    UserInfo findByUserId(@Param("user_id") Long userId);
 }

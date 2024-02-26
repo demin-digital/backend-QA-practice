@@ -36,7 +36,7 @@ public class RegistrationService {
                 if (phoneNumberValidator(request.getPhoneNumber())) {
                     Token userToken = new Token();
 
-                    userToken.setUserId(userInfoRepository.save(new UserInfo(request)).getUser_id());
+                    userToken.setUserId(userInfoRepository.save(new UserInfo(request)).getUserId());
                     userToken.setValue(jwtTokenProviderService.generateToken(request.getUsername()));
 
                     tokenRepository.save(userToken);

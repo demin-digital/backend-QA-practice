@@ -11,7 +11,7 @@ public class UserInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private Long user_id;
+    private Long userId;
     @Column(name = "password", nullable = false)
     private String password;
     @Column(name = "username", unique = true, nullable = false)
@@ -38,8 +38,8 @@ public class UserInfo {
         this.phoneNumber = request.getPhoneNumber();
     }
 
-    public Long getUser_id() {
-        return user_id;
+    public Long getUserId() {
+        return userId;
     }
 
     public String getUsername() {
@@ -87,6 +87,6 @@ public class UserInfo {
     }
 
     public boolean hasData() {
-        return user_id != null;
+        return userId != null;
     }
 }

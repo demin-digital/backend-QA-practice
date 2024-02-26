@@ -14,6 +14,16 @@ public class Token {
     private String value;
 
 
+    public Token (Token token) {
+        this.userId = token.getUserId();
+        this.tokenId = token.getTokenId();
+        this.value = token.getValue();
+    }
+
+    public Token() {
+
+    }
+
     public Long getTokenId() {
         return tokenId;
     }
