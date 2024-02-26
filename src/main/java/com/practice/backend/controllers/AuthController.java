@@ -29,7 +29,7 @@ public class AuthController {
         UserInfo authenticatedUser = authService.authenticate(request.getUsername(), request.getPassword());
 
         if (authenticatedUser.hasData()) {
-            AuthResponse response = new AuthResponse(true, "Авторизация успешна!", tokenService.getToken(authenticatedUser.getUser_id()));
+            AuthResponse response = new AuthResponse(true, "Авторизация успешна!", tokenService.getToken(authenticatedUser.getUserId()));
             return ResponseEntity.ok(response);
         } else {
             AuthResponse response = new AuthResponse(false, "Неверные учетные данные");
