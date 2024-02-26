@@ -2,7 +2,6 @@ package com.practice.backend.controllers;
 
 import com.practice.backend.models.requestEntities.RegistrationRequest;
 import com.practice.backend.models.responseEntities.RegistrationResponse;
-import com.practice.backend.services.JwtTokenProviderService;
 import com.practice.backend.services.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

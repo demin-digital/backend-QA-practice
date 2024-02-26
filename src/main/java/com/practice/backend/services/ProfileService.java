@@ -1,6 +1,5 @@
 package com.practice.backend.services;
 
-import com.practice.backend.models.Token;
 import com.practice.backend.models.UserInfo;
 import com.practice.backend.repositories.TokenRepository;
 import com.practice.backend.repositories.UserInfoRepository;

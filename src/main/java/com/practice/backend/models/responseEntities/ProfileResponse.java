@@ -1,6 +1,5 @@
 package com.practice.backend.models.responseEntities;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.practice.backend.models.UserInfo;
 
 
