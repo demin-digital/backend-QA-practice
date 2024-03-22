@@ -13,7 +13,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <spring-boot.version>2.5.4</spring-boot.version>
         <my-sql.version>8.0.26</my-sql.version>
-        <jackson.version>2.12.5</jackson.version>
+        <jackson.version>2.16.1</jackson.version>
         <javax.xml.bind.version>2.3.1</javax.xml.bind.version>
         <thymeleaf.version>3.0.9</thymeleaf.version>
     </properties>
@@ -23,8 +23,37 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>${spring-boot.version}</version>
+            <version>3.2.2</version>
         </dependency>
+
+
+<!--        удалить-->
+        <dependency>
+        <groupId>javax.persistence</groupId>
+        <artifactId>javax.persistence-api</artifactId>
+        <version>2.2</version> <!-- или другая версия, которая соответствует вашему проекту -->
+    </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jdbc</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.3.1.Final</version>
+        </dependency>
+
+
+
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -35,7 +64,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>${spring-boot.version}</version>
+            <version>3.2.2</version>
         </dependency>
 
         <!-- JSON support -->
@@ -60,19 +89,32 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
+            <version>2.0.7</version>
         </dependency>
 
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.2.5</version>
+            <version>1.4.7</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
             <version>2.5.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -131,16 +173,16 @@
             </plugin>
 
             <plugin>
-                     <groupId>org.springframework.boot</groupId>
-                     <artifactId>spring-boot-maven-plugin</artifactId>
-                     <version>1.1.12.RELEASE</version>
-                     <executions>
-                         <execution>
-                             <goals>
-                                 <goal>repackage</goal>
-                             </goals>
-                         </execution>
-                     </executions>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.2.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
